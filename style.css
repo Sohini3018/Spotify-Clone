@@ -1,0 +1,42 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.fixed-section {
+  height: 164vh;
+  width: 360px;
+  border-right: 1px solid white;
+  position: fixed;
+  background-color: #2f2d2d;
+}
+
+body {
+  display: flex;
+}
+
+.scroll-section {
+  width: 114vw;
+  background-color: #2f2d2d;
+  height: 200vh;
+}
+
+.navbar {
+  background-color: #141514;
+  height: 84px;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.btn {
+  display: flex;
+  height: 100%;
+  width: 314px;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.btn button {
+  width: 96px;
+  height: 48px;
+}
