@@ -3,40 +3,251 @@
   padding: 0;
 }
 
-.fixed-section {
-  height: 164vh;
-  width: 360px;
-  border-right: 1px solid white;
-  position: fixed;
-  background-color: #2f2d2d;
-}
-
 body {
-  display: flex;
+  background-color: #121212;
+  font-family: "Montserrat", sans-serif;
 }
 
-.scroll-section {
-  width: 114vw;
-  background-color: #2f2d2d;
-  height: 200vh;
+.sidebar {
+  position: fixed;
+  width: 220px;
+  background-color: #000000;
+  padding: 24px;
+  top: 0;
+  bottom: 0;
+  left: 0;
 }
 
-.navbar {
-  background-color: #141514;
-  height: 84px;
-  display: flex;
-  justify-content: flex-end;
+.sidebar .logo img {
+  width: 100px;
 }
 
-.btn {
+.sidebar .navigation ul {
+  list-style: none;
+  margin-top: 20px;
+}
+
+.sidebar .navigation ul li {
+  padding: 10px 0px;
+}
+
+.sidebar .navigation ul li a {
+  color: #b3b3b3;
+  font-size: 13px;
+  text-decoration: none;
+  font-weight: bold;
+}
+/* When hover on a the whole a tag colour will change */
+
+.sidebar .navigation ul li a:hover,
+.sidebar .navigation ul li a:active,
+.sidebar .navigation ul li a:focus {
+  color: #ffffff;
+}
+/* when hover on a tag text only icon(fa) colour will blocked */
+
+.sidebar .navigation ul li a:hover .fa,
+.sidebar .navigation ul li a:active .fa,
+.sidebar .navigation ul li a:focus .fa {
+  color: #b3b3b3; /* icon colour remains same */
+}
+/* When hover on icon (fa) the whole a tag colour will change */
+
+.sidebar .navigation ul li a:hover .fa:hover,
+.sidebar .navigation ul li a:active .fa:active,
+.sidebar .navigation ul li a:focus .fa:focus {
+  color: #ffffff;
+}
+
+.sidebar .navigation ul li a .fa {
+  font-size: 20px;
+  margin-right: 10px;
+}
+
+/* Policy part */
+
+.sidebar .policies {
+  position: absolute;
+  bottom: 100px;
+}
+
+.sidebar .policies ul {
+  list-style: none;
+}
+
+.sidebar .policies ul li {
+  padding-bottom: 5px;
+}
+
+.sidebar .policies ul li a {
+  color: #b3b3b3;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 10px;
+}
+
+/* Scrollable/ main part */
+
+.main-container {
+  margin-left: 245px;
+  margin-bottom: 100px;
+}
+
+.topbar {
   display: flex;
-  height: 100%;
-  width: 314px;
+  justify-content: space-between;
+  background-color: #101010;
+  padding: 14px 30px;
+}
+
+.topbar .prev-next-buttons button {
+  color: #7a7a7a;
+  cursor: not-allowed;
+  height: 24px;
+  width: 24px;
+  border-radius: 100%;
+  font-size: 18px;
+  background-color: #090909;
+  border: 0px;
+  margin-right: 10px;
+}
+
+.topbar .navbar {
   align-items: center;
+  display: flex;
+}
+
+.topbar .navbar ul {
+  list-style: none;
+}
+
+.topbar .navbar ul li {
+  display: inline-block;
+  margin: 0px 8px;
+  width: 70px;
+}
+
+.topbar .navbar ul li a {
+  color: #b3b3b3;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 14px;
+  letter-spacing: 1px;
+}
+
+.topbar .navbar li a:hover,
+.topbar .navbar li a:focus,
+.topbar .navbar li a:active {
+  color: #ffffff;
+  font-size: 15px;
+}
+
+.topbar .navbar li.divider {
+  color: #ffffff;
+  margin: 0px 20px;
+  font-size: 15px;
+  width: auto;
+}
+
+.topbar .navbar button {
+  background-color: #ffffff;
+  color: #000000;
+  font-size: 16px;
+  font-weight: bold;
+  padding: 14px 30px;
+  border: 30px;
+  border-radius: 40px;
+  cursor: pointer;
+  margin-left: 20px;
+}
+
+.topbar .navbar button:hover,
+.topbar .navbar button:active,
+.topbar .navbar button:focus {
+  background-color: #f2f2f2;
+}
+
+/* Preview part in bottom */
+
+.preview {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(to right, #ae2896, #509bf5);
+  display: flex;
+  padding: 15px 40px;
+  justify-content: space-between;
+}
+
+.preview .text h6 {
+  color: #ffffff;
+  font-weight: 400;
+  text-transform: uppercase;
+  font-size: 12px;
+  margin-bottom: 10px;
+}
+
+.preview p {
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.preview button {
+  background-color: #ffffff;
+  columns: #000000;
+  font-size: 16px;
+  font-weight: bold;
+  padding: 14px 30px;
+  border: 0px;
+  border-radius: 40px;
+  cursor: pointer;
+}
+.main-container .spotify-playlist .playlist {
+  height: 50vh;
+  border-radius: 10px;
+  /* border: 1px solid white; */
+  background-color: #2b2929;
+  margin: 15px 50px;
+}
+
+.main-container .spotify-playlist .playlist h2 {
+  color: #ffffff;
+  position: relative;
+  top: 24px;
+  left: 40px;
+}
+
+.main-container .spotify-playlist .playlist .list {
+  width: 100%;
+  height: 100%;
+  /* margin-left: -21px; */
+  margin-top: 30px;
+  display: flex;
   justify-content: space-evenly;
 }
 
-.btn button {
-  width: 96px;
-  height: 48px;
+.main-container .spotify-playlist .playlist .list .song-box {
+  height: 273px;
+  width: 192px;
+  margin-top: 10px;
+  background-color: #1c1b1bba;
+  border-radius: 6px;
+}
+
+.main-container .spotify-playlist .playlist .list .song-box img {
+  width: 164px;
+  height: 164px;
+  position: relative;
+  left: 15px;
+  top: 12px;
+}
+
+.main-container .spotify-playlist .playlist .list .song-box p {
+  color: #ffffff;
+  position: relative;
+  top: 27px;
+  left: 15px;
+  font-size: 15px;
 }
